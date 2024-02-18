@@ -245,7 +245,7 @@
 /* good time section */
 .good-time-section{
   padding: 2rem;
-  background-image: url(http://nowadays.local/wp-content/uploads/2024/02/098a31489cabd3fe3a6b64695a1a096a.png);
+  background-image:url("/img/098a31489cabd3fe3a6b64695a1a096a.png");
   h2{
       font-size:32px;
       font-family: sans-serif;
@@ -396,6 +396,253 @@
   }
 }
 
+/* what everyone */
+.what-everyone-section{
+  padding:2rem;
+  h2{
+      font-weight: 500;
+      font-size:32px;
+      line-height: 32px;
+      font-family: Euclid Fle;
+  }
+  &__video-list{
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+  }
+  .scroll-indicator__empty{
+      background-color: rgba(241, 239, 232, 1);
+  }
+  &__buttons-container{
+      margin-top: 2rem;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      gap:1rem;
+      &--button{
+          width:325px;
+      height:48px;
+      color:black;
+      border:2px solid black;
+      background-color: rgba(255, 255, 255, 1);
+      }
+  }
+}
+
+/* starts-group */
+.starts-group {
+      direction: rtl;
+      display: inline-block;
+      margin-right: 3px;
+      unicode-bidi: bidi-override;
+      input {
+        display: none;
+      }
+      label {
+        color: black;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      input:checked ~ label {
+        color: #EFBA87;
+      }
+    }
+
+    /* reviews section */
+    .wrap-reviews-section {
+      width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+        .reviews-section {
+            padding: 2rem 0 2rem 0;
+            overflow: hidden;
+            background-color: rgba(250, 250, 250, 1);
+            display: flex;
+            animation: animated-text 25s linear infinite;
+            width: 3200px;
+            gap:3rem;
+            &__card{
+                display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1rem;
+            &--description{
+                width: 280px;
+                text-align: center;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 20.29px;
+                font-family: 'Elicit Script';
+            }
+            &--name{
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 500;
+                font-family: 'Euclid Flex';
+            }
+            }
+        }
+    }
+
+/* subscribe save */
+
+.subscribe-save{
+  display: flex;
+  flex-direction: column;
+  background: #FDFBF2;
+  padding: 1rem;
+  &__main-image{
+      width: 100%;
+      margin-bottom: 2rem;
+  }
+  &__text-container{
+      position: relative;
+      &--img{
+          position: absolute;
+          right: 0;
+      }
+      &--subscribe, &--andsave{
+       font-weight: 500;
+       font-size: 32px;
+       line-height: 32px;
+       font-family: 'Euclid Flex';
+      }
+      &--subscribe{
+          color:black;
+      }
+      &--andsave{
+          color:#E7B78A;
+          margin-bottom: 2rem;
+      }
+      &--description{
+          font-size: 16px;
+          line-height: 20.29px;
+          font-weight: 400;
+          font-family: 'Euclid Circular A';
+          margin-bottom: 10px;
+      }
+      &--grid{
+          display: grid;
+          grid-template-columns: auto auto;
+          .grid-point{
+              display: flex;
+              gap:.5rem;
+              align-items: center;
+              img{
+                  width:12px;
+                  height: 12px;
+              }
+          }
+      }
+      &--action{
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          button{
+              background-color: #E7B78A;
+              width: 325px;
+              height: 48px;
+              border: none;
+              margin-top: 1rem;
+              font-weight: 500;
+          }
+      }
+  }
+}
+
+/* input */
+.group { 
+  position:relative; 
+}
+input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid black;
+  background-color: transparent;
+}
+input:focus { outline:none; }
+
+/* LABEL =================== */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+}
+
+/* active state */
+input:focus ~ label, 
+input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:black;
+}
+
+/* BOTTOM BARS ================ */
+.bar 	{ 
+  position:relative; 
+  display:block;
+  width:300px; 
+}
+.bar:before,
+.bar:after {
+  content:'';
+  position:absolute;
+  height:2px; 
+  width:0;
+  bottom:1px;
+  background:black; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================== */
+.highlight {
+  position:absolute;
+  top:25%;
+  left:0;
+  height:60%;
+  width:100px; 
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@keyframes inputHighlighter {
+    from { 
+    background:#5264AE; 
+  }
+  to 	{ 
+    width: 0; 
+    background:transparent; 
+  }
+}
+
 @keyframes animated-text {
   0% {
       transform: translateX(0);
@@ -425,4 +672,77 @@
       align-items:center;
       text-transform:uppercase;
   }
+
+  /*
+      Scroll indicator
+  */
+  .scroll-indicator{
+      &__empty{
+          width: 85%;
+      }
+  }
+
+  /* 
+      more ways section
+  */
+  .more-ways-section{
+      &__button-container{
+          display: flex;
+          justify-content: center;
+      }
+  }
+
+  /* what everyone */
+.what-everyone-section{
+  padding:2rem;
+  .parent-what-everyone-section{
+      display: none;
+  }
+  &__buttons-container{
+      flex-direction: row;
+      justify-content: center;
+  }
+}
+
+/* subscribe save*/
+.subscribe-save{
+  flex-direction: row;
+  padding: 0;
+  &__main-image{
+      width: 50%;
+      margin: 0;
+  }
+  &__text-container{
+      margin: 3rem 0 0 5rem;
+      &--subscribe, &--andsave{
+          font-size: 48px;
+          line-height: 48px;
+      }
+      &--description{
+          font-size: 20px;
+          line-height: 20.29px;
+      }
+      &--grid{
+          font-size: 18px;
+          line-height:22.82px;
+          .grid-point{
+              img{
+                  width:16px;
+                  height: 16px;
+              }
+          }
+      }
+      &--action{
+          button{
+              width: 425px;
+          }
+      }
+  }
+}
+.group{
+  input, .bar{
+      width:408px;
+  }
+}
+
 }

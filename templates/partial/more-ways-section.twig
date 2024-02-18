@@ -4,10 +4,10 @@
          <p class="more-ways-section__subtitle">Drinks with THC.</p>
          <div class="more-ways-section__products scroll-content-more-ways-section">
             {% for i in range(1, 6) %}
-               {% include 'more-ways-section-card.twig' %}
+               {% include 'partial/more-ways-section-card.twig' %}
             {% endfor %}
          </div>
-         {% include 'scroll-indicator.twig' with {'parentElement':'more-ways-section'} %}
+         {% include 'partial/scroll-indicator.twig' with {'parentElement':'more-ways-section'} %}
         <div class="more-ways-section__button-container">
             <button class="more-ways-section__button-container--submit">TRY THEM NOW</button>
         </div>

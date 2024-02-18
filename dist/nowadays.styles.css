@@ -766,7 +766,7 @@ header {
 /* good time section */
 .good-time-section {
   padding: 2rem;
-  background-image: url(http://nowadays.local/wp-content/uploads/2024/02/098a31489cabd3fe3a6b64695a1a096a.png);
+  background-image: url(9a8cddb72d0aef654a0d.png);
 }
 .good-time-section h2 {
   font-size: 32px;
@@ -906,6 +906,257 @@ header {
   background-color: rgb(241, 239, 232);
 }
 
+/* what everyone */
+.what-everyone-section {
+  padding: 2rem;
+}
+.what-everyone-section h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: Euclid Fle;
+}
+.what-everyone-section__video-list {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+}
+.what-everyone-section .scroll-indicator__empty {
+  background-color: rgb(241, 239, 232);
+}
+.what-everyone-section__buttons-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.what-everyone-section__buttons-container--button {
+  width: 325px;
+  height: 48px;
+  color: black;
+  border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+}
+
+/* starts-group */
+.starts-group {
+  direction: rtl;
+  display: inline-block;
+  margin-right: 3px;
+  unicode-bidi: bidi-override;
+}
+.starts-group input {
+  display: none;
+}
+.starts-group label {
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+.starts-group input:checked ~ label {
+  color: #EFBA87;
+}
+
+/* reviews section */
+.wrap-reviews-section {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.wrap-reviews-section .reviews-section {
+  padding: 2rem 0 2rem 0;
+  overflow: hidden;
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  animation: animated-text 25s linear infinite;
+  width: 3200px;
+  gap: 3rem;
+}
+.wrap-reviews-section .reviews-section__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.wrap-reviews-section .reviews-section__card--description {
+  width: 280px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20.29px;
+  font-family: "Elicit Script";
+}
+.wrap-reviews-section .reviews-section__card--name {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "Euclid Flex";
+}
+
+/* subscribe save */
+.subscribe-save {
+  display: flex;
+  flex-direction: column;
+  background: #FDFBF2;
+  padding: 1rem;
+}
+.subscribe-save__main-image {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.subscribe-save__text-container {
+  position: relative;
+}
+.subscribe-save__text-container--img {
+  position: absolute;
+  right: 0;
+}
+.subscribe-save__text-container--subscribe, .subscribe-save__text-container--andsave {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "Euclid Flex";
+}
+.subscribe-save__text-container--subscribe {
+  color: black;
+}
+.subscribe-save__text-container--andsave {
+  color: #E7B78A;
+  margin-bottom: 2rem;
+}
+.subscribe-save__text-container--description {
+  font-size: 16px;
+  line-height: 20.29px;
+  font-weight: 400;
+  font-family: "Euclid Circular A";
+  margin-bottom: 10px;
+}
+.subscribe-save__text-container--grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.subscribe-save__text-container--grid .grid-point {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.subscribe-save__text-container--grid .grid-point img {
+  width: 12px;
+  height: 12px;
+}
+.subscribe-save__text-container--action {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subscribe-save__text-container--action button {
+  background-color: #E7B78A;
+  width: 325px;
+  height: 48px;
+  border: none;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* input */
+.group {
+  position: relative;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* LABEL =================== */
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: black;
+}
+
+/* BOTTOM BARS ================ */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  background: black;
+  transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================== */
+.highlight {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  height: 60%;
+  width: 100px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
 @keyframes animated-text {
   0% {
     transform: translateX(0);
@@ -931,5 +1182,63 @@ header {
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+  }
+  /*
+      Scroll indicator
+  */
+  .scroll-indicator__empty {
+    width: 85%;
+  }
+  /* 
+      more ways section
+  */
+  .more-ways-section__button-container {
+    display: flex;
+    justify-content: center;
+  }
+  /* what everyone */
+  .what-everyone-section {
+    padding: 2rem;
+  }
+  .what-everyone-section .parent-what-everyone-section {
+    display: none;
+  }
+  .what-everyone-section__buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  /* subscribe save*/
+  .subscribe-save {
+    flex-direction: row;
+    padding: 0;
+  }
+  .subscribe-save__main-image {
+    width: 50%;
+    margin: 0;
+  }
+  .subscribe-save__text-container {
+    margin: 3rem 0 0 5rem;
+  }
+  .subscribe-save__text-container--subscribe, .subscribe-save__text-container--andsave {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .subscribe-save__text-container--description {
+    font-size: 20px;
+    line-height: 20.29px;
+  }
+  .subscribe-save__text-container--grid {
+    font-size: 18px;
+    line-height: 22.82px;
+  }
+  .subscribe-save__text-container--grid .grid-point img {
+    width: 16px;
+    height: 16px;
+  }
+  .subscribe-save__text-container--action button {
+    width: 425px;
+  }
+  .group input, .group .bar {
+    width: 408px;
   }
 }

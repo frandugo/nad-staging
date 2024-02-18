@@ -1,0 +1,45 @@
+{% block content %}
+    <section class="subscribe-save">
+        <img class="subscribe-save__main-image" src="{{ theme.link ~ '/img/IG_May-2023_Nowadays_Shot-3-1.png'}}" />
+        <div class="subscribe-save__text-container">
+            <img class="subscribe-save__text-container--img" src="{{ theme.link ~ '/img/Capa_1.png' }}" />
+            <p class="subscribe-save__text-container--subscribe">SUBSCRIBE</p>
+            <p class="subscribe-save__text-container--andsave">AND SAVE</p>
+            <div class="subscribe-save__text-container--description">
+                <p class="subscribe-save__description--title">Subscribers-only perks!</p>
+                <p class="subscribe-save__description--subtitle">Access exclusive promotions.</p>
+            </div>
+            <div class="subscribe-save__text-container--grid">
+                <div class="grid-point">
+                    <img src="{{ theme.link ~ '/img/Frame-58.png' }}" />
+                    <p>up to 15% off</p>
+                </div>
+                <div class="grid-point">
+                    <img src="{{ theme.link ~ '/img/Frame-58.png' }}" />
+                    <p>Free shipping</p>
+                </div>
+                <div class="grid-point">
+                    <img src="{{ theme.link ~ '/img/Frame-58.png' }}" />
+                    <p>cancel any time</p>
+                </div>
+                <div class="grid-point">
+                    <img src="{{ theme.link ~ '/img/Frame-58.png' }}" />
+                    <p>Early product access</p>
+                </div>
+                <div class="grid-point">
+                    <img src="{{ theme.link ~ '/img/Frame-58.png' }}" />
+                    <p>Exclusive merch discounts</p>
+                </div>
+            </div>
+            <div class="subscribe-save__text-container--action">
+                <div class="group">      
+                    <input type="text" required>
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label>Email Address</label>
+                  </div>
+                <button class="action-button">SUBSCRIBE & SAVE</button>
+            </div>
+        </div>
+    </section>
+{% endblock %}

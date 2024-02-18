@@ -1,0 +1,15 @@
+{% block content %}
+    <section class="what-everyone-section">
+        <h2>WHAT EVERYONE IS SAYING</h2>
+        <div class="what-everyone-section__video-list scroll-content-what-everyone-section">
+            {% for i in range(1, 6) %}
+                {% include 'partial/what-everyone-section-card.twig' %}
+            {% endfor %}
+        </div>
+        {% include 'partial/scroll-indicator.twig' with {'parentElement':'what-everyone-section'} %}
+        <div class="what-everyone-section__buttons-container">
+            <button class="what-everyone-section__buttons-container--button">FOLLOW OUR INSTAGRAM</button>
+            <button class="what-everyone-section__buttons-container--button">FOLLOW OUR TIKTOK</button>
+        </div>
+    </section>
+{% endblock %}
