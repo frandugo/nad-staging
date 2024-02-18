@@ -1,0 +1,55 @@
+{% block content  %}
+    <div class="scroll-indicator parent-{{ parentElement }}">
+        <div class="scroll-indicator__progress progress-{{ parentElement }}"></div>
+        <div class="scroll-indicator__empty empty-{{ parentElement }}"></div>
+        <div class="scroll-indicator__buttons">
+            <button class="scroll-indicator__buttons--left disabled left-{{ parentElement }}" onclick="moveLeft()"> <img src="{{ theme.link }}'/img/Vector-136.svg" alt="Move Left"> </button>
+            <button class="scroll-indicator__buttons--right right-{{ parentElement }}" onclick="moveRight()"> <img src="{{ theme.link }}'/img/Vector-136.svg" alt="Move Right"> </button>
+        </div>
+    </div>
+{% endblock %}
+
+<script>
+    
+    
+    document.querySelector(".scroll-content-{{ parentElement }}").onscroll = function(){
+    const progressBar = document.querySelector(".progress-{{ parentElement }}");
+    const progressBarEmptyWidth = document.querySelector('.empty-{{ parentElement }}').offsetWidth;
+    const scrollContentWidth = document.querySelector(".scroll-content-{{ parentElement }}").scrollWidth - document.querySelector(".scroll-content-{{ parentElement }}").clientWidth;
+    let progress = (document.querySelector(".scroll-content-{{ parentElement }}").scrollLeft / scrollContentWidth) * progressBarEmptyWidth;
+    progressBar.style.width = progress + "px";
+    }
+
+    document.querySelector('.left-{{ parentElement }}').onclick = function(){
+        const scrollContent = document.querySelector(".scroll-content-{{ parentElement }}")
+        const scrollContentWidth = document.querySelector(".scroll-content-{{ parentElement }}").scrollWidth - document.querySelector(".scroll-content-{{ parentElement }}").clientWidth;
+        scrollContent.scrollLeft -= 200;
+
+        if(scrollContent.scrollLeft === 0){
+            document.querySelector('.left-{{ parentElement }}').classList.add('disabled');
+        }
+        else if(scrollContent.scrollLeft > 0 && scrollContent.scrollLeft < scrollContentWidth){
+            document.querySelector('.right-{{ parentElement }}').classList.remove('disabled');
+        }
+        else{
+            document.querySelector('.left-{{ parentElement }}').classList.remove('disabled');
+        
+        }
+    }
+    document.querySelector('.right-{{ parentElement }}').onclick = function(){
+        const scrollContent = document.querySelector(".scroll-content-{{ parentElement }}")
+        const scrollContentWidth = document.querySelector(".scroll-content-{{ parentElement }}").scrollWidth - document.querySelector(".scroll-content-{{ parentElement }}").clientWidth; 
+        scrollContent.scrollLeft += 200;
+
+        if(scrollContent.scrollLeft >= scrollContentWidth){
+            document.querySelector('.right-{{ parentElement }}').classList.add('disabled');
+        }
+        else if(scrollContent.scrollLeft > 0 && scrollContent.scrollLeft < scrollContentWidth){
+            document.querySelector('.left-{{ parentElement }}').classList.remove('disabled');
+
+        }
+        else{
+            document.querySelector('.right-{{ parentElement }}').classList.remove('disabled');
+        }
+    }
+</script>

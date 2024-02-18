@@ -1,0 +1,130 @@
+{% extends "base.twig" %}
+{% block content %}
+	<div class="hero">
+		<div class="hero__image" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')">
+			<div class="hero__image-info">
+				<h2>Drink<br>Nowadays</h2>
+				<p>Cannabis in a Bottle</p>
+				<a class='btn btn__beige--big' href="#">Shop Now</a>
+			</div>
+		</div>
+		<div class="hero__video" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')"></div>
+	</div>
+	<div class="icons">
+		<div class="icons__icon">
+			<img src="{{ theme.link }}'/img/quick.svg'" alt="icons">
+			<p>Quick<br>Onset time</p>
+		</div>
+		<div class="icons__icon">
+			<img src="{{ theme.link }}'/img/bye.svg'" alt="icons">
+			<p>Bye Bye<br>Hangover</p>
+		</div>
+		<div class="icons__icon">
+			<img src="{{ theme.link }}'/img/drink.svg'" alt="icons">
+			<p>Drink With
+				<br>
+				Friends</p>
+		</div>
+		<div class="icons__icon">
+			<img class="icons__shipping" src="{{ theme.link }}'/img/shipping.svg'">
+			<p>Shipping To<br>Your Door</p>
+		</div>
+	</div>
+
+	{% include 'partial/animated-text.twig' %}
+
+	<section class="best-sellers">
+		<div class="container">
+			<div class="best-sellers__head">
+				<h2 class="best-sellers__title">Shop Nowadays Best Sellers</h2>
+				<p class="best-sellers__description">Bright. Buzzy. Balanced</p>
+			</div>
+			<div class="best-sellers__products">
+				<div class="bs-product">
+					<div class="bs-product__image">
+						<img src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
+					</div>
+					<div class="bs-product__info">
+						<h2 class="bs-product__title">Nowadays micro dose</h2>
+						<div class="bs-product__reviews">
+							<input type="radio" id="star5" name="rating" value="5"/>
+							<label for="star5">&#9733;</label>
+							<input type="radio" id="star4" name="rating" value="4"/>
+							<label for="star4">&#9733;</label>
+							<input type="radio" id="star3" name="rating" value="3"/>
+							<label for="star3">&#9733;</label>
+							<input type="radio" id="star2" name="rating" value="2"/>
+							<label for="star2">&#9733;</label>
+							<input type="radio" id="star1" name="rating" value="1"/>
+							<label for="star1">&#9733;</label>
+						</div>
+						<span>67 reviews</span>
+						<p class="bs-product__description">2mg thc drink</p>
+						<p class="bs-product__bottle">750 ml/33mg per bottle</p>
+						<p class="bs-product__price">$39.99</p>
+						<a href="#" class=" btn btn__beige--small">shop now</a>
+
+					</div>
+				</div>
+				<div class="bs-product">
+					<div class="bs-product__image">
+						<img src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
+					</div>
+					<div class="bs-product__info">
+						<h2 class="bs-product__title ">Nowadays low dose</h2>
+						<div class="bs-product__reviews">
+							<input type="radio" id="star10" name="rating1" value="5"/>
+							<label for="star10">&#9733;</label>
+							<input type="radio" id="star9" name="rating1" value="4"/>
+							<label for="star9">&#9733;</label>
+							<input type="radio" id="star8" name="rating1" value="3"/>
+							<label for="star8">&#9733;</label>
+							<input type="radio" id="star7" name="rating1" value="2"/>
+							<label for="star7">&#9733;</label>
+							<input type="radio" id="star6" name="rating1" value="1"/>
+							<label for="star6">&#9733;</label>
+						</div>
+						<span>87 reviews</span>
+						<p class="bs-product__description">6mg thc drink</p>
+						<p class="bs-product__bottle">750 ml/100mg per bottle</p>
+						<p class="bs-product__price">$59.99</p>
+						<a href="#" class=" btn btn__beige--small">shop now</a>
+
+
+					</div>
+				</div>
+				<div class="bs-product">
+					<div class="bs-product__image">
+						<img class="bs-product__img" src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
+					</div>
+					<div class="bs-product__info">
+						<h2 class="bs-product__title ">Nowadays high dose</h2>
+						<div class="bs-product__reviews">
+							<input type="radio" id="star16" name="rating3" value="5"/>
+							<label for="star16">&#9733;</label>
+							<input type="radio" id="star15" name="rating3" value="4"/>
+							<label for="star15">&#9733;</label>
+							<input type="radio" id="star14" name="rating3" value="3"/>
+							<label for="star14">&#9733;</label>
+							<input type="radio" id="star12" name="rating3" value="2"/>
+							<label for="star12">&#9733;</label>
+							<input type="radio" id="star11" name="rating3" value="1"/>
+							<label for="star11">&#9733;</label>
+						</div>
+						<span>98 reviews</span>
+						<p class="bs-product__description">10mg thc drink</p>
+						<p class="bs-product__bottle">750 ml/166mg per bottle</p>
+						<p class="bs-product__price">$79.99</p>
+						<a href="#" class=" btn btn__beige--small">shop now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="shop-all">
+		<a href="#" class=" btn btn__white--small">Shop all</a>
+	</div>
+	 {% include 'partial/media-testimonials.twig' %}
+	{#  {% include 'partial/good-time-section.twig' %}
+	{% include 'partial/more-ways-section.twig' %} #}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% block content %}
+   <section class="more-ways-section">
+         <h2>MORE WAYS TO ENJOY NOWADAYS</h2>
+         <p class="more-ways-section__subtitle">Drinks with THC.</p>
+         <div class="more-ways-section__products scroll-content-more-ways-section">
+            {% for i in range(1, 6) %}
+               {% include 'more-ways-section-card.twig' %}
+            {% endfor %}
+         </div>
+         {% include 'scroll-indicator.twig' with {'parentElement':'more-ways-section'} %}
+        <div class="more-ways-section__button-container">
+            <button class="more-ways-section__button-container--submit">TRY THEM NOW</button>
+        </div>
+   </section>
+{% endblock %}
