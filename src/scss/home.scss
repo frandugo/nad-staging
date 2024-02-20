@@ -252,8 +252,9 @@
     display: flex;
     animation: animated-text 25s linear infinite;
     width: 3200px;
-    padding: 40px 0;
     gap: 3rem;
+    padding: 40px 0;
+
     .media-testimonials__item {
       text-align: center;
       max-width: 300px;
