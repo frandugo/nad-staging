@@ -273,6 +273,8 @@ table {
 .nav__link {
   color: #ffffff;
   text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
 }
 .nav__link--button {
   color: #3D4563;
@@ -281,6 +283,22 @@ table {
   border-radius: 12px;
   text-decoration: none;
   border: none;
+}
+
+.hdr__logo-link {
+  width: 540px;
+}
+
+.main-menu {
+  width: 100%;
+}
+.main-menu .menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.main-menu a {
+  color: #ffffff;
 }
 
 header {
@@ -295,6 +313,7 @@ header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .nav__link {

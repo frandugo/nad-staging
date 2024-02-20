@@ -47,6 +47,8 @@ function register_my_menus()
 	register_nav_menus(
 		array(
 			'header-menu' => __('Header Menu'),
+			'menu-left' => __('Menu Left'),
+			'menu-right' => __('Menu Right'),
 			'extra-menu' => __('Extra Menu')
 		)
 	);
@@ -108,6 +110,8 @@ class StarterSite extends Timber\Site
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::context();';
 		$context['menu']  = new Timber\Menu();
+		$context['menu-left']  = new Timber\Menu('menu-left');
+		$context['menu-right']  = new Timber\Menu('menu-right');
 		$context['site']  = $this;
 		return $context;
 	}

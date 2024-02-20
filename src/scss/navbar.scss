@@ -29,6 +29,8 @@
         @extend .nav_text;
         color: $white;
         text-decoration: none;
+        display: flex;
+        gap: 0.5rem;
         &--button{
           @extend .nav_text--button;
           color: $blue;
@@ -39,4 +41,20 @@
           border: none;
         }
     }
+}
+
+.hdr__logo-link{
+  width: 540px;
+}
+
+.main-menu{
+  width: 100%;
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  a{
+    color: $white;
+  }
 }
