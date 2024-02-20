@@ -22,9 +22,11 @@
 	{% endblock %}
 </header>
 {% block content %}{% endblock %}
-<footer id="footer">
-	{% block footer %}
-		{% include 'footer.twig' %}
-	{% endblock %}
-</footer>
-{{ function('wp_footer') }}</body></html>
+{% block footer %}
+	<footer id="footer">
+		<div
+			class="container">{# {% include 'footer.twig' %} #}
+		</div>
+	</footer>
+	{{ function('wp_footer') }}
+{% endblock %}</body></html>
