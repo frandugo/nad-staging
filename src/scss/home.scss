@@ -132,24 +132,24 @@
     }
   }
 
-  // &__reviews {
-  //   direction: rtl;
-  //   display: inline-block;
-  //   margin-right: 3px;
-  //   unicode-bidi: bidi-override;
+  &__reviews {
+    direction: rtl;
+    display: inline-block;
+    margin-right: 3px;
+    unicode-bidi: bidi-override;
 
-  //   input {
-  //     display: none;
-  //   }
-  //   label {
-  //     color: $bg_color;
-  //     cursor: pointer;
-  //     font-size: 20px;
-  //   }
-  //   input:checked ~ label {
-  //     color: #efba87;
-  //   }
-  // }
+    input {
+      display: none;
+    }
+    label {
+      color: $bg_color;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    input:checked ~ label {
+      color: #efba87;
+    }
+  }
 
   &__title,
   &__reviews,
