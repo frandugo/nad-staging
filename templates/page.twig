@@ -1,15 +1,42 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
+	<div class="hero">
+		<div class="hero__image" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')">
+			<div class="hero__image-info">
+				<h2>Drink<br>Nowadays</h2>
+				<p>Cannabis in a Bottle</p>
+				<a class='btn btn__beige--big' href="#">Shop Now</a>
+			</div>
+		</div>
+		<div class="hero__video" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')"></div>
 	</div>
-	<!-- /content-wrapper -->
-{% endblock %}
+	<div class="icons">
+		<div class="icons__icon">
+			<img src="{{ theme.link }}'/img/quick.svg'" alt="icons">
+			<p>Quick<br>Onset time</p>
+		</div>
+		<div class="icons__icon">
+			<img src="{{ theme.link }}'/img/bye.svg'" alt="icons">
+			<p>Bye Bye<br>Hangover</p>
+		</div>
+		<div class="icons__icon">
+			<img src="{{ theme.link }}'/img/drink.svg'" alt="icons">
+			<p>Drink With
+				<br>
+				Friends</p>
+		</div>
+
+
+		<div class="content-wrapper">
+			<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+				<section class="article-content">
+					<h1 class="article-h1">{{post.title}}</h1>
+					<div class="article-body">
+						{{post.content}}
+					</div>
+				</section>
+			</article>
+		</div>
+		<!-- /content-wrapper -->
+	{% endblock %}
