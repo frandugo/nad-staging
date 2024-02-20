@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: page-products
+ * Templates Name: page-products
  * 
  * 
  * The template for displaying all pages.
