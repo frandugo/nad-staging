@@ -1,14 +1,14 @@
 {% extends "base.twig" %}
 {% block content %}
 	<div class="hero">
-		<div class="hero__image" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')">
+		<div class="hero__image" style="background-image: url('{{ theme.link }}/img/nowadays-hero-img.png')">
 			<div class="hero__image-info">
 				<h2>Drink<br>Nowadays</h2>
 				<p>Cannabis in a Bottle</p>
 				<a class='btn btn__beige--big' href="#">Shop Now</a>
 			</div>
 		</div>
-		<div class="hero__video" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')"></div>
+		<div class="hero__video" style="background-image: url('{{ theme.link }}/img/nowadays-hero-video.png')"></div>
 	</div>
 	<div class="icons">
 		<div class="icons__icon">
@@ -41,7 +41,7 @@
 			</div>
 			<div class="best-sellers__products">
 				<div class="bs-product">
-					<div class="bs-product__image">
+					<div class="bs-product__image bs-product__one">
 						<img src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
 					</div>
 					<div class="bs-product__info">
@@ -66,7 +66,7 @@
 					</div>
 				</div>
 				<div class="bs-product">
-					<div class="bs-product__image">
+					<div class="bs-product__image bs-product__two">
 						<img src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
 					</div>
 					<div class="bs-product__info">
@@ -91,7 +91,7 @@
 					</div>
 				</div>
 				<div class="bs-product">
-					<div class="bs-product__image">
+					<div class="bs-product__image bs-product__three">
 						<img class="bs-product__img" src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
 					</div>
 					<div class="bs-product__info">
@@ -125,8 +125,7 @@
 	{% include 'partial/good-time-section.twig' %}
 	{% include 'partial/more-ways-section.twig' %}
 	{% include 'partial/what-everyone-section.twig' %}
+	{% include 'partial/have-questions.twig' %}
 	{% include 'partial/reviews-section.twig' %}
 	{% include 'partial/subscribe-save.twig' %}
-
-
 {% endblock %}

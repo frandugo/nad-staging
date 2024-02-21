@@ -1,8 +1,17 @@
 {% block content %}
 	<section class="more-ways-section">
 		<div class="container">
-			<h2>MORE WAYS TO ENJOY NOWADAYS</h2>
-			<p class="more-ways-section__subtitle">Drinks with THC.</p>
+			<div class="more-ways-section__content">
+				<div class="more-ways-section__info">
+					<h2>MORE WAYS TO ENJOY<br>
+						NOWADAYS</h2>
+					<p class="more-ways-section__subtitle">Drinks with THC.</p>
+				</div>
+				<div class="more-ways-section__image">
+					<img src="{{theme.link}}'/img/nowadays-rotate.png'" alt="img">
+				</div>
+
+			</div>
 			<div class="more-ways-section__products scroll-content-more-ways-section">
 				{% for i in range(1, 6) %}
 					{% include 'partial/more-ways-section-card.twig' %}
