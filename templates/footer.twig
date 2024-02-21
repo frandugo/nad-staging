@@ -5,6 +5,9 @@
 		<div class="footer-links">
 			<div class="footer-links__left">
 				<ul>
+					{% for item in menu-left.get_items %}
+						<li><a href="{{item.link}}">{{item.title}}</a></li>
+					{% endfor %}
 					<li><a href="#">FAQ</a></li>
 					<li><a href="#">Contact Us</a></li>
 					<li><a href="#">Privacy Policy</a></li>
@@ -19,8 +22,6 @@
 					<li><a href="#">LinkedIn</a></li>
 					<li><a href="#">Sell Nowadays</a></li>
 				</ul>
-
-
 			</div>
 		</div>
 	</div>

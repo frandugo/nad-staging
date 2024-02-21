@@ -49,6 +49,8 @@ function register_my_menus()
 			'header-menu' => __('Header Menu'),
 			'menu-left' => __('Menu Left'),
 			'menu-right' => __('Menu Right'),
+			'footer-first' => __('Footer First'),
+			'footer-secondary' => __('Footer Secondary'),
 			'extra-menu' => __('Extra Menu')
 		)
 	);
@@ -60,8 +62,11 @@ function my_theme_enqueue_styles()
 {
 	wp_enqueue_style('style', get_template_directory_uri() . 'style.css');
 	wp_enqueue_style('style-nowadays', get_template_directory_uri() . '/dist/nowadays.styles.css');
+
+	wp_enqueue_script('script-nowadays', get_template_directory_uri() . '/dist/nowadays.scripts.js', array('jquery'), '1.0.2', true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+
 
 /**
  * Sets the directories (inside your theme) to find .twig files
@@ -112,6 +117,8 @@ class StarterSite extends Timber\Site
 		$context['menu']  = new Timber\Menu();
 		$context['menu-left']  = new Timber\Menu('menu-left');
 		$context['menu-right']  = new Timber\Menu('menu-right');
+		$context['footer-first']  = new Timber\Menu(5);
+		$context['footer-secondary']  = new Timber\Menu('footer-secondary');
 		$context['site']  = $this;
 		return $context;
 	}
@@ -192,5 +199,12 @@ class StarterSite extends Timber\Site
 		return $twig;
 	}
 }
+
+function theme_add_woocommerce_support()
+{
+    add_theme_support('woocommerce');
+}
+
+add_action('after_setup_theme', 'theme_add_woocommerce_support');
 
 new StarterSite();
