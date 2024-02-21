@@ -1,14 +1,14 @@
 {% extends "base.twig" %}
 {% block content %}
 	<div class="hero">
-		<div class="hero__image" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')">
+		<div class="hero__image" style="background-image: url('{{ theme.link }}/img/nowadays-hero-img.png')">
 			<div class="hero__image-info">
 				<h2>Drink<br>Nowadays</h2>
 				<p>Cannabis in a Bottle</p>
 				<a class='btn btn__beige--big' href="#">Shop Now</a>
 			</div>
 		</div>
-		<div class="hero__video" style="background-image: url('{{ theme.link }}/img/Nowadays-Banner-home.jpg')"></div>
+		<div class="hero__video" style="background-image: url('{{ theme.link }}/img/nowadays-hero-video.png')"></div>
 	</div>
 	<div class="icons">
 		<div class="icons__icon">
@@ -41,7 +41,7 @@
 			</div>
 			<div class="best-sellers__products">
 				<div class="bs-product">
-					<div class="bs-product__image">
+					<div class="bs-product__image bs-product__one">
 						<img src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
 					</div>
 					<div class="bs-product__info">
@@ -63,11 +63,10 @@
 						<p class="bs-product__bottle">750 ml/33mg per bottle</p>
 						<p class="bs-product__price">$39.99</p>
 						<a href="#" class=" btn btn__beige--small">shop now</a>
-
 					</div>
 				</div>
 				<div class="bs-product">
-					<div class="bs-product__image">
+					<div class="bs-product__image bs-product__two">
 						<img src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
 					</div>
 					<div class="bs-product__info">
@@ -89,12 +88,10 @@
 						<p class="bs-product__bottle">750 ml/100mg per bottle</p>
 						<p class="bs-product__price">$59.99</p>
 						<a href="#" class=" btn btn__beige--small">shop now</a>
-
-
 					</div>
 				</div>
 				<div class="bs-product">
-					<div class="bs-product__image">
+					<div class="bs-product__image bs-product__three">
 						<img class="bs-product__img" src="{{ theme.link }}'/img/Nowadays_micro_dose.webp'">
 					</div>
 					<div class="bs-product__info">
@@ -124,10 +121,11 @@
 	<div class="shop-all">
 		<a href="#" class=" btn btn__white--small">Shop all</a>
 	</div>
-	 {% include 'partial/media-testimonials.twig' %}
+	{% include 'partial/media-testimonials.twig' %}
 	{% include 'partial/good-time-section.twig' %}
 	{% include 'partial/more-ways-section.twig' %}
 	{% include 'partial/what-everyone-section.twig' %}
+	{% include 'partial/have-questions.twig' %}
 	{% include 'partial/reviews-section.twig' %}
 	{% include 'partial/subscribe-save.twig' %}
 {% endblock %}
